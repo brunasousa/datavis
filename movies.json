@@ -1,5 +1,12 @@
 [
     {
+        "Film": "",
+        "Year": 0,
+        "Genre": "",
+        "Worldwide_Gross_M": 0,
+        "Budget_M": 0
+    },
+    {
         "Film": "Harry Potter and the Deathly Hallows Part 2",
         "Year": 2011,
         "Genre": "Fantasy",

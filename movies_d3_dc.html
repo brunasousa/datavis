@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Usando D3 + crossfilter + dc.js</title>
+    <link rel="stylesheet" href="css/dc.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/crossfilter.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/dc.js" charset="utf-8"></script>
+
+</head>
+<body>
+    <div id="chart"></div>
+	<script type="text/javascript">
+        var barChart = dc.barChart('#chart');
+
+		d3.json("movies.json", function(data){
+			// formatando nossos dados
+            var dtgFormat = d3.time.format("%Y");
+            data.forEach(function(d){
+                d.Year = +d.Year;
+                d.Worldwide_Gross_M = +d.Worldwide_Gross_M;
+                d.Budget_M = +d.Budget_M;
+            });
+
+            //criando um crossfilter
+            var facts = crossfilter(data);
+
+            var yearDim = facts.dimension(function(d){
+                return d.Year;
+            });
+
+            var grossByYearGroup = yearDim.group().reduceSum(function(d){
+                return d.Worldwide_Gross_M;
+            });
+
+            barChart
+                .width(668)
+                .height(480)
+                .x(d3.scale.linear().domain([2006,2012]))
+                .brushOn(false)
+                .gap(30)
+                .yAxisLabel("Worldwide Gross")
+                .dimension(yearDim)
+                .group(grossByYearGroup)
+                .centerBar(true)
+                .on('renderlet', function(barChart) {
+                    barChart.selectAll('rect').on("click", function(d) {
+                        console.log("click!", d);
+                    });
+                });
+
+            barChart.xAxis().tickFormat(d3.format("d"));
+
+            dc.renderAll();
+
+		});
+	</script>
+
+    <div id="chart2"></div>
+
+    <script type="text/javascript">
+        var barChart2 = dc.barChart('#chart2');
+
+        d3.json("movies.json", function(data){
+            // formatando nossos dados
+            var dtgFormat = d3.time.format("%Y");
+            data.forEach(function(d){
+                d.Year = +d.Year;
+                d.Worldwide_Gross_M = +d.Worldwide_Gross_M;
+                d.Budget_M = +d.Budget_M;
+            });
+
+            //criando um crossfilter
+            var facts = crossfilter(data);
+
+            var genreDim = facts.dimension(function(d){
+                return d.Genre;
+            });
+
+            var grossByGenreGroup = genreDim.group().reduceSum(function(d){
+                return d.Worldwide_Gross_M;
+            });
+
+            barChart2
+                .width(668)
+                .height(480)
+                .x(d3.scale.ordinal().domain(data.map(function (d){ return d.Genre})))
+                .xUnits(dc.units.ordinal)
+                .elasticX(true)
+                .brushOn(false)
+                .centerBar(true)
+                .gap(50)
+                .yAxisLabel("Worldwide Gross")
+                .dimension(genreDim)
+                .group(grossByGenreGroup)
+                .centerBar(true)
+                .on('renderlet', function(barChart2) {
+                    barChart2.selectAll('rect').on("click", function(d) {
+                        console.log("click!", d);
+                    });
+                });
+
+            dc.renderAll();
+
+        });
+    </script>
+			
+</body>
+</html>
