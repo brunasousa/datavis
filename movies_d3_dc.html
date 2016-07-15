@@ -55,6 +55,7 @@
                 });
 
             barChart.xAxis().tickFormat(d3.format("d"));
+            barChart.margins().left += 40;
 
             dc.renderAll();
 
@@ -107,6 +108,7 @@
                         console.log("click!", d);
                     });
                 });
+            barChart2.margins().left += 40;
 
             dc.renderAll();
 
