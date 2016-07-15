@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		 <title> Movies </title>
+		 <!-- Inclusões das bibliotecas JavaScript para o Highcharts -->
+		 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		 <script src="http://code.highcharts.com/highcharts.js"></script>
+	 </head>
+	 <body>
+	 	<div id="container" style="width:100%; height:400px;"></div>
+	 	<div id="container2" style="width:100%; height:400px;"></div>
+	 	<script>
+			  	$(function () {
+				 	$('#container').highcharts({
+				 		chart: {
+						 type: 'column'
+						},
+						title: {
+						 text: 'Arrecadação nas Bilheterias'
+						},
+						xAxis: {
+						 categories: ['Worldwide', 'Domestic', 'Brazil', 'Russia']
+						},
+						yAxis: {
+						 title: {
+						 text: 'Itens consumidos'
+						 }
+						},
+						series: [
+							{name: 'Inside Out',
+							 data: [857427711, 356461711, 13938297, 16710083]}, 
+							{name: 'The Jungle Book',
+							 data: [936194900 , 360294900 , 10823625, 20348426]}, 
+							{name: 'Kung Fu Panda',
+							 data: [631744560 , 215434591 , 16379155, 20579860]},
+							{name: 'Madagascar',
+							 data: [532680671 , 193595521 , 11724562, 7461616]},
+							{name: 'Up',
+							 data: [731342744 , 293004164 , 10528510, 12073559]}						
+						]
+				 	});
+
+
+				 	$('#container2').highcharts({
+				 		chart: {
+						 type: 'column'
+						},
+						title: {
+						 text: 'Arrecadação nas Bilheterias na Semana de Estreia'
+						},
+						xAxis: {
+						 categories: ['Sexta', 'Sábado', 'Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta']
+						},
+						yAxis: {
+						 title: {
+						 text: 'Itens consumidos'
+						 }
+						},
+						series: [
+							{name: 'Inside Out',
+							 data: [ 34266177, 30942493, 25231602, 10485640, 13038808, 9374850, 9477440]}, 
+							{name: 'The Jungle Book',
+							 data: [ 32013316, 40811977, 30436171, 7023511, 8958687, 5850752, 5580012]}, 
+							{name: 'Kung Fu Panda',
+							 data: [ 20303918,  22649938, 17285274, 6316507, 6064854, 5665504, 5391343]},
+							{name: 'Madagascar',
+							 data: [ 13947637, 17858596, 15418361, 13787536, 3835272, 3776231, 3643923]},
+							{name: 'Up',
+							 data: [21481834 , 26394319 , 20232637, 6271151, 6405897, 6116646, 6169951]}						
+						]
+				 	});
+				});
+		</script>
+	 </body>
+</html>
