@@ -1,7 +1,7 @@
 id,name
-1,Aerolândia
+1,Aerolandia
 2,Aeroporto
-3,José de Alencar
+3,Jose de Alencar
 4,Aldeota
 5,Alto da Balança
 6,Álvaro Weyne
@@ -10,7 +10,7 @@ id,name
 9,Antônio Bezerra
 10,Autran Nunes
 11,Bairro de Lourdes
-12,Barra do Ceará
+12,Barra do Ceara
 13,Barroso
 14,Bela Vista
 15,Benfica
@@ -22,33 +22,33 @@ id,name
 21,Cambeba
 22,Canindezinho
 23,Carlito Pamplona
-24,Castelão
+24,Castelao
 25,Centro
 26,Cidade 2000
-27,Cidade dos Funcionários
+27,Cidade dos Funcionarios
 28,Coaçu
-29,Cocó
-30,Conjunto Ceará
+29,Coco
+30,Conjunto Ceara
 31,Conjunto Esperança
 32,Conjunto Palmeiras
 33,Couto Fernandes
 34,Cristo Redentor
-35,Curió
+35,Curio
 36,Damas
-37,Demócrito Rocha
+37,Democrito Rocha
 38,Dendê
 39,Dias Macedo
-40,Dionísio Torres
+40,Dionisio Torres
 41,Dom Lustosa
 42,Dunas
 43,Edson Queiroz
 44,Ellery
 45,Luciano Cavalcante
 46,Farias Brito
-47,Fátima
+47,Fatima
 48,Floresta
-49,Genibaú
-50,Gentilândia
+49,Genibau
+50,Gentilandia
 51,Granja Lisboa
 52,Granja Portugal
 53,Guajeru
@@ -58,15 +58,15 @@ id,name
 57,Itaperi
 58,Jacarecanga
 59,Jangurussu
-60,Jardim América
+60,Jardim America
 61,Jardim Cearense
 62,Jardim das Oliveiras
 63,Jardim Guanabara
 64,Jardim Iracema
-65,João XXIII
-66,Joaquim Távora
-67,Jóquei Clube
-68,José Bonifácio
+65,Joao XXIII
+66,Joaquim Tavora
+67,Joquei Clube
+68,Jose Bonifacio
 69,Lagoa Redonda
 70,Maraponga
 71,Mata Galinha
@@ -81,17 +81,17 @@ id,name
 80,Panamericano
 81,Papicu
 82,Parangaba
-83,Parque Araxá
-84,Parque Dois Irmãos
+83,Parque Araxa
+84,Parque Dois Irmaos
 85,Parque Iracema
 86,Parque Manibura
 87,Parque Presidente Vargas
 88,Parque Santa Maria
 89,Parque Santa Rosa
-90,Parque São José
-91,Parquelândia
-92,Parreão
-93,Passaré
+90,Parque Sao Jose
+91,Parquelandia
+92,Parreao
+93,Passare
 94,Paupina
 95,Pedras
 96,Pici
@@ -99,22 +99,22 @@ id,name
 98,Planalto Ayrton Senna
 99,Praia de Iracema
 100,Praia do Futuro
-101,Prefeito José Walter
+101,Prefeito Jose Walter
 102,Presidente Kennedy
 103,Quintino Cunha
-104,Rodolfo Teófilo
+104,Rodolfo Teofilo
 105,Sabiaguaba
 106,Salinas
-107,São Bento
-108,São Gerardo
-109,São João do Tauape
+107,Sao Bento
+108,Sao Gerardo
+109,Sao Joao do Tauape
 110,Sapiranga
 111,Serrinha
 112,Siqueira
 113,Varjota
-114,Vicente Pinzón
-115,Vila Manuel Sátiro
+114,Vicente Pinzon
+115,Vila Manuel Satiro
 116,Vila Pery
-117,Vila União
+117,Vila Uniao
 118,Vila Velha
-200,Bairro não identificado
+200,Bairro nao identificado

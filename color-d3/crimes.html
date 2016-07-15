@@ -61,6 +61,10 @@
     function getTaxaHomicidios(idBairro){
 		var homicidios = homicidiosById.get(idBairro);
 		var populacao =  populacaoByBairros.get(idBairro);
+
+		if(isNaN(populacaoByBairros.get(idBairro)))
+			return "Dados insuficientes de "
+
 		return ((homicidios*100000)/populacao).toFixed(2);
 	}
 
